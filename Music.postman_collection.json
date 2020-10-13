@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "3bbadb76-e3c7-4122-b5d9-d417984d9139",
+		"name": "Music",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user1\",\n    \"password\":\"test123\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/token/"
+			},
+			"response": []
+		},
+		{
+			"name": "Playlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0OTg2LCJqdGkiOiJmZGMxM2YxMzY3OGQ0MWIyODA4N2EyNDk5YWJmZDM1MSIsInVzZXJfaWQiOjJ9.L3tVY7DUMO31th3Dnk5dWOf6NTMXZMfRMqx0X-xn8y4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Play1\",\n    \"description\":\"asd\",\n    \"artwork\":\"https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/playlist/"
+			},
+			"response": []
+		},
+		{
+			"name": "Consumer Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user2\",\n    \"password\":\"test123\"\n  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/token/"
+			},
+			"response": []
+		},
+		{
+			"name": "Artist Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user1\",\n    \"password\":\"test123\"\n  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/token/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Song",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0Njc3LCJqdGkiOiI1NjU4MjEwMDY0YWY0MGRkOWUxZjhmNTFmMmU1OTdkMiIsInVzZXJfaWQiOjF9.o7sN1oDcmxav4YT0vE-BT1XhDw-x1AcjxH46hxmd2Es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Folk4",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Folk",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2020-09-09",
+							"type": "text"
+						},
+						{
+							"key": "song",
+							"type": "file",
+							"src": "/home/mihir/Desktop/test.mp3"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/song"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Songs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0OTg2LCJqdGkiOiJmZGMxM2YxMzY3OGQ0MWIyODA4N2EyNDk5YWJmZDM1MSIsInVzZXJfaWQiOjJ9.L3tVY7DUMO31th3Dnk5dWOf6NTMXZMfRMqx0X-xn8y4",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/song"
+			},
+			"response": []
+		},
+		{
+			"name": "Add song to playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0OTg2LCJqdGkiOiJmZGMxM2YxMzY3OGQ0MWIyODA4N2EyNDk5YWJmZDM1MSIsInVzZXJfaWQiOjJ9.L3tVY7DUMO31th3Dnk5dWOf6NTMXZMfRMqx0X-xn8y4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"song_pk\":8,\n    \"playlist_pk\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/addSong"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Album",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0Njc3LCJqdGkiOiI1NjU4MjEwMDY0YWY0MGRkOWUxZjhmNTFmMmU1OTdkMiIsInVzZXJfaWQiOjF9.o7sN1oDcmxav4YT0vE-BT1XhDw-x1AcjxH46hxmd2Es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"title\":\"Album2\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/album"
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0OTg2LCJqdGkiOiJmZGMxM2YxMzY3OGQ0MWIyODA4N2EyNDk5YWJmZDM1MSIsInVzZXJfaWQiOjJ9.L3tVY7DUMO31th3Dnk5dWOf6NTMXZMfRMqx0X-xn8y4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/recommendation"
+			},
+			"response": []
+		},
+		{
+			"name": "Add song to album (for artist)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0Njc3LCJqdGkiOiI1NjU4MjEwMDY0YWY0MGRkOWUxZjhmNTFmMmU1OTdkMiIsInVzZXJfaWQiOjF9.o7sN1oDcmxav4YT0vE-BT1XhDw-x1AcjxH46hxmd2Es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"song_pks\":[2,3,4,5,6],\n    \"album_pk\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/addAlbumSong"
+			},
+			"response": []
+		},
+		{
+			"name": "Create empty playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0OTg2LCJqdGkiOiJmZGMxM2YxMzY3OGQ0MWIyODA4N2EyNDk5YWJmZDM1MSIsInVzZXJfaWQiOjJ9.L3tVY7DUMO31th3Dnk5dWOf6NTMXZMfRMqx0X-xn8y4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Play1\",\n    \"description\":\"asd\",\n    \"artwork\":\"https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/playlist/"
+			},
+			"response": []
+		},
+		{
+			"name": "Auto-suggest Songs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNjY0OTg2LCJqdGkiOiJmZGMxM2YxMzY3OGQ0MWIyODA4N2EyNDk5YWJmZDM1MSIsInVzZXJfaWQiOjJ9.L3tVY7DUMO31th3Dnk5dWOf6NTMXZMfRMqx0X-xn8y4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/recommendation?category=genre",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recommendation"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "genre"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
