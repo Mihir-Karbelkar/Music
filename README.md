@@ -5,8 +5,6 @@
 - The goal was to recommend users songs similar to their playlists but not in their playlist to avoid having the same songs again and again. However, if the system runs out of new songs to recommend the current playlists songs are taken into consideration to match the required playlist length.
 - Another recommendation strategy for categories alone (e.g. only genre based songs, artist based songs) was to find out the likeliness of the user to listen to the same genre which was calculated by numOfSongsWithCategory/totalNumOfSongs. 
 - The postman collection for testing has been added for testing.
-- Have also attached prepopulated DB with super user credentials -> username: msd key: msd123.
-- Feel free to ping me for any issues.
 
 ### Installation
 
